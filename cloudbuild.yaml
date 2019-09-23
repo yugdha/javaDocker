@@ -4,7 +4,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/dockernew-253806/dockerfilejava', '.']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'create', '--region', 'us-central']
+  args: ['config', 'set', 'dockernew-253806']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/dockernew-253806/dockerfilejava']
   
