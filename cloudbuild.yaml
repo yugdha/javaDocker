@@ -2,10 +2,8 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/dockernew-253806/dockerfilejava', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/dockernew-253806/dockerfilejava']
+  args: ['build', '-t', 'gcr.io/javabuild-253405/dockerfilejava', '.']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/dockernew-253806/dockerfilejava']
+  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/javabuild-253405/dockerfilejava']
   
-images: ['gcr.io/dockernew-253806/dockerfilejava']
+images: ['gcr.io/javabuild-253405/dockerfilejava']
