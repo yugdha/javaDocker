@@ -10,3 +10,7 @@ resources:
   cpu: 2
   memory_gb: 4.0
   disk_size_gb: 10
+readiness_check:
+  check_interval_sec: 5
+  timeout_sec: 3600
+  app_start_timeout_sec: 3600
