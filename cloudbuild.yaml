@@ -2,10 +2,10 @@ steps:
 - name: 'gcr.io/cloud-builders/mvn'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/Infosys-gcp-demo-project/dockerfilejava', '.']
+  args: ['build', '-t', 'gcr.io/infosys-gcp-demo-project/dockerfilejava', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/Infosys-gcp-demo-project/dockerfilejava']
+  args: ['push', 'gcr.io/infosys-gcp-demo-project/dockerfilejava']
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/Infosys-gcp-demo-project/dockerfilejava']
+  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/infosys-gcp-demo-project/dockerfilejava']
   
 images: ['gcr.io/newdocker/dockerfilejava']
